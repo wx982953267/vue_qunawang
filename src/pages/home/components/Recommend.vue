@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" :alt="item.title">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,27 +17,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1503/88/88fe892b930435c6.water.jpg_200x200_60e1883f.jpg',
-        title: '灵山大佛',
-        desc: '江苏省无锡市滨湖区灵山路1号'
-      },
-      {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1503/88/88fe892b930435c6.water.jpg_200x200_60e1883f.jpg',
-        title: '灵山大佛',
-        desc: '江苏省无锡市滨湖区灵山路1号'
-      },
-      {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1503/88/88fe892b930435c6.water.jpg_200x200_60e1883f.jpg',
-        title: '灵山大佛',
-        desc: '江苏省无锡市滨湖区灵山路1号'
-      }]
-    }
+    return {}
   }
 }
 </script>
