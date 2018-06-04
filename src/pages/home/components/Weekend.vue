@@ -27,7 +27,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-  @import '~styles/mixins.styl';
+  @import '~styles/mixins.styl'
   .recommend-title
     margin-top: .2rem
     line-height: .8rem
