@@ -1,15 +1,36 @@
 <template>
-  <div class="banner">
+<div>
+  <div class="banner" @click="handleBannerClick">
     <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1803/7b/7b023b9728f0834fa3.img.jpg_600x330_5f4c76f7.jpg" alt="">
     <div class="banner-info">
       <div class="banner-title">世界花卉大观园(AAAA景区)</div>
       <div class="banner-number"><span class="iconfont banner-icon">&#xe60f;</span>39</div>
     </div>
   </div>
+  <common-gallary :imgs="imgs" v-show='showGallary' @close="handleGallaryClose"></common-gallary>
+</div>
 </template>
 <script>
+import CommonGallary from 'common/gallary/Gallary'
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  components: {
+    CommonGallary
+  },
+  data () {
+    return {
+      showGallary: false,
+      imgs: ['http://img1.qunarzz.com/sight/p0/1803/d1/d13342f9f34abb72a3.img.jpg_r_800x800_d2da8499.jpg', 'http://img1.qunarzz.com/sight/p0/1803/d6/d62e1bd921cb2071a3.img.jpg_r_800x800_69de9d96.jpg']
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
