@@ -42,7 +42,6 @@ export default {
       } else {
         this.showAbs = true
       }
-      console.log(document.documentElement.scrollTop)
     }
   },
   activated () {
@@ -73,6 +72,7 @@ export default {
     top: 0
     left: 0
     right: 0
+    z-index: 2
     height: $headerHeight
     font-size: .32rem
     line-height: $headerHeight
