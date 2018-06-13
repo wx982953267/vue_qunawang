@@ -1,14 +1,14 @@
 <template>
-<div>
-  <div class="banner" @click="handleBannerClick">
-    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1803/7b/7b023b9728f0834fa3.img.jpg_600x330_5f4c76f7.jpg" alt="">
-    <div class="banner-info">
-      <div class="banner-title">世界花卉大观园(AAAA景区)</div>
-      <div class="banner-number"><span class="iconfont banner-icon">&#xe60f;</span>39</div>
+  <div>
+    <div class="banner" @click="handleBannerClick">
+      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1803/7b/7b023b9728f0834fa3.img.jpg_600x330_5f4c76f7.jpg" alt="">
+      <div class="banner-info">
+        <div class="banner-title">世界花卉大观园(AAAA景区)</div>
+        <div class="banner-number"><span class="iconfont banner-icon">&#xe60f;</span>39</div>
+      </div>
     </div>
+    <common-gallary :imgs="imgs" v-show='showGallary' @close="handleGallaryClose"></common-gallary>
   </div>
-  <common-gallary :imgs="imgs" v-show='showGallary' @close="handleGallaryClose"></common-gallary>
-</div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'

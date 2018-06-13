@@ -19,7 +19,7 @@ export default {
     font-size: .32rem
     line-height: $headerHeight
     text-align: center
-    color: #ffff
+    color: #fff
     background: $bgColor
     .header-back
       position: absolute
