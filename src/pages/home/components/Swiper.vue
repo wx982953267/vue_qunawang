@@ -40,5 +40,5 @@ export default {
     height: 0
     padding-bottom: 31.2%
     .swipe-img
-       width: 100%
+      width: 100%
 </style>
