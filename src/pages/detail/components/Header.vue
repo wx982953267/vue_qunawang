@@ -32,6 +32,7 @@ export default {
   methods: {
     handleScroll () {
       const top = document.documentElement.scrollTop
+      console.log(top)
       if (top > 60) {
         let opacity = top / 180
         opacity = opacity > 1 ? 1 : opacity
@@ -44,12 +45,19 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  destroyed () {
+    console.log('解绑全局事件')
     window.removeEventListener('scroll', this.handleScroll)
   }
+  // activated () {
+  //   window.addEventListener('scroll', this.handleScroll)
+  // },
+  // deactivated () {
+  //   window.removeEventListener('scroll', this.handleScroll)
+  // }
 }
 </script>
 <style lang="stylus" scoped>
