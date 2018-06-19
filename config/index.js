@@ -24,7 +24,7 @@ module.exports = {
         target: 'https://www.easy-mock.com',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/mock/5b10d61f3a1a393db33d41b4/'
+          '^/api': '/mock/5b10d61f3a1a393db33d41b4/' 
         }
       }
     },
@@ -67,7 +67,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/qunawang',
 
     /**
      * Source Maps
